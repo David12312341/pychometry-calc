@@ -1,0 +1,149 @@
+body {
+        background-image: url("bgform.jpg");
+        background-size: contain;
+        background-size: cover;
+        background-repeat: no-repeat;
+}
+
+form {
+    color: darkslateblue;
+    width: 500px;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: dodgerblue;
+    padding: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 4px 4px 4px rgba(0,123,255,.25);
+    background-color: #fdfeff;
+    
+}
+div {
+    direction: rtl;
+}
+
+html {
+    direction: rtl;
+}
+
+.form-row {
+    max-width: 600px;
+}
+
+.selected-button-sections {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.answersSubject {
+    color: darkslateblue;
+    width: 400px;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: rgba(7, 194, 241, 0.425);
+    background-color: white;
+    border-radius: 5px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    background: rgba(246, 253, 255, 0.562);
+    padding: 0px 8px 3px 8px;
+    box-shadow: 0px -1px 2px #F1F1F1;
+    -moz-box-shadow: -0px -1px 2px #F1F1F1;
+    -webkit-box-shadow: 4px 4px 4px #F1F1F1;
+    font-weight: normal;
+    font-size: 12px;
+    padding: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+}
+
+.form-header {
+    border-bottom: 1px solid;
+        color: cornflowerblue;
+    margin: 20px;
+    border-color: lightgray;
+}
+
+.calc-button {
+    border-top: 1px solid;
+    border-color: lightgray;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.results {
+    width: 500px;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: dodgerblue;
+    padding: 50px;
+    padding-top: 20px;
+    box-shadow: 4px 4px 4px rgba(0,123,255,.25);
+    background-color: #fdfeff;
+}
+
+.score {
+    position: relative;
+    right: 240px;
+}
+
+.score-subject {
+        color: darkgreen;
+        background-color: rgb(207, 243, 207);
+    width: 400px;
+    border: 1px solid;
+        border-color: rgb(162, 214, 162);
+    border-radius: 10px;
+    border-radius: 5px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    padding: 0px 8px 3px 8px;
+    box-shadow: 0px -1px 2px #F1F1F1;
+    -moz-box-shadow: -0px -1px 2px #F1F1F1;
+    -webkit-box-shadow: 4px 4px 4px #F1F1F1;
+    font-weight: normal;
+    font-size: 12px;
+    padding: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.overall-score-subject {
+        color: darkgreen;
+    background-color: rgb(207, 243, 207);
+    width: 400px;
+    border: 1px solid;
+        border-color: rgb(162, 214, 162);
+    border-radius: 10px;
+    border-radius: 5px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    padding: 0px 8px 3px 8px;
+    box-shadow: 0px -1px 2px #F1F1F1;
+    -moz-box-shadow: -0px -1px 2px #F1F1F1;
+    -webkit-box-shadow: 4px 4px 4px #F1F1F1;
+    font-weight: normal;
+    font-size: 12px;
+    padding: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+
+}
+
+.form-control-cust {
+    width: 18%;
+    position: relative;
+    right: 20px;
+    height: 27px;
+    top: 3px;
+    padding: .375rem .75rem;
+    padding-left: 0px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}

@@ -1,0 +1,148 @@
+<html dir="rtl">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link href='http://serve.fontsproject.com/css?family=Drugulin+CLM:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="psychometry_calculator.css">
+    <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="psychometry_calculator.js"></script>
+
+</head>
+
+<body>
+    <center>ּ
+            <form id="inputForm" class="form">
+                <div class="sectionsTotal" id="sectionsTotal">
+                    <h5>מספר פרקים</h5>
+                    <div class="form-group row form-row">
+                        <div class="col" role="group" aria-label="hebrew">
+                            <label>מילולי: </label><br>
+                            <button type="button" id="heb1" value="1" class="btn btn-outline-info" onclick="selectHebrewSections(1)">1</button>
+                            <button type="button" id="heb2" value="2" class="btn btn-outline-info" onclick="selectHebrewSections(2)">2</button>
+                            <button type="button" id="heb3" value="3" class="btn btn-outline-info" onclick="selectHebrewSections(3)">3</button>
+
+                        </div>
+                        <br>
+                        <div class="col" role="group" aria-label="english">
+                            <label> אנגלית:</label><br>
+                            <button type="button" id="eng1" value="1" class="btn btn-outline-info" onclick="selectEnglishSections(1)">1</button>
+                            <button type="button" id="eng2" value="2" class="btn btn-outline-info" onclick="selectEnglishSections(2)">2</button>
+                            <button type="button" id="eng3" value="3" class="btn btn-outline-info" onclick="selectEnglishSections(3)">3</button>
+                        </div>
+                        <br>
+                        <div class="col" role="group" aria-label="math">
+                            <label> כמותי:</label><br>
+                            <button type="button" id="math1" value="1" class="btn btn-outline-info" onclick="selectMathSections(1)">1</button>
+                            <button type="button" id="math2" value="2" class="btn btn-outline-info" onclick="selectMathSections(2)">2</button>
+                            <button type="button" id="math3" value="3" class="btn btn-outline-info" onclick="selectMathSections(3)">3</button>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <input id="getTestButton" type="button" class="btn btn-info" value="קבל מבחן!">
+                    </div>
+                    <label id="errorLabel1" style="display:none; color:red;">לא נבחרו מספיק פרקים</label>
+                </div>
+                <div id="answersSection" style="display: none">
+                    <div class="form-header">
+                        <h3>בחר את מספר התשובות הנכונות בכל פרק</h3>ּ
+                    </div>
+                    <div class="answersSubject">
+                        <div id ="hebSec1" class="form-group">
+                            <div class="col"><label>פרק 1 (מילולי): </label>
+                                <input class="form-control-cust" type="number" id="hebSection1">
+                            </div>
+                        </div>
+
+                        <div id ="hebSec2" class="form-group">
+                            <div class="col"><label>פרק 2 (מילולי): </label>
+                                <input class="form-control-cust" type="number" id="hebSection2">
+                            </div>
+                        </div>
+
+                        <div id ="hebSec3" class="form-group">
+                            <div class="col"><label>פרק 3 (מילולי): </label>
+                                <input class="form-control-cust"type="number" id="hebSection3">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="answersSubject">
+                        <div id ="engSec1" class="form-group">
+                            <div class="col"><label>פרק 1 (אנגלית): </label>
+                                <input class="form-control-cust" type="number" id="engSection1"></div>
+                        </div>
+
+
+                        <div id ="engSec2" class="form-group">
+                            <div class="col"><label>פרק 2 (אנגלית): </label>
+                                <input class="form-control-cust" type="number" id="engSection2">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div id ="engSec3" class="col"><label>פרק 3 (אנגלית): </label>
+                                <input class="form-control-cust" type="number" id="engSection3">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="answersSubject">
+                        <div id ="mathSec1" class="form-group">
+                            <div class="col"><label>פרק 1 (כמותי): </label>
+                                <input class="form-control-cust" type="number" id="mathSection1">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div id ="mathSec2" class="col"><label>פרק 2 (כמותי): </label>
+                                <input class="form-control-cust" type="number" id="mathSection2">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div id ="mathSec3" class="col"><label>פרק 3 (כמותי): </label>
+                                <input class="form-control-cust" type="number" id="mathSection3">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group calc-button">
+                        <input type="button" id="resultButton" class=" btn btn-outline-primary" value="חשב ציון פסיכומטרי!">
+                    </div>
+                </div>
+
+            </form>
+        <br>
+        <div class="results" id="resultsSection" style="display: none">
+            <div class="form-header">
+                <h3>ציון פסיכומטרי משוער </h3><br>
+            </div>
+            <div class="score-subject">
+                <div class="form-group">
+                    <h5>ציוני הגלם שהשגת:</h5>
+                    <span><strong><label style="position: relative; left: 52px;">ציון מילולי: </label></strong><label class="score" style="position: relative; right: 243px;"
+                            id="hebrewScore"></label><br></span>
+                    <span><strong><label style="position: relative; left: 50px;">ציון אנגלית: </label></strong><label class="score" style="position: relative; right: 240px;"
+                            id="englishScore"></label><br></span>
+                    <span><strong><label style="position: relative; left: 51px;">ציון כמותי: </label></strong> <label class="score" style="position: relative; right: 242px;"
+                            id="mathScore"></label><br></span>
+                </div>
+            </div>
+            <div class="overall-score-subject" style=" padding-top: 5px; ">
+                <div class="form-group"></div>
+                <h5 style="position: relative; left: 75px;">ציון פסיכומטרי משוקלל:</h5>
+                <span><strong><label style="position: relative; left: 122px;">שקלול רב-תחומי: </label></strong> <label style=" position: relative; right: 127px; "
+                        id="overallTotal"></label><br></span>
+                <div class="form-group"></div>
+            </div>
+        </div>
+        </div>
+    </center>
+
+
+</body>
+
+</html>
