@@ -86,6 +86,7 @@ html {
 .score {
     position: relative;
     right: 240px;
+    font-size: 14px;
 }
 
 .score-subject {
@@ -146,4 +147,8 @@ html {
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
+}
+
+.twenty-three {
+        font-size: 18px;
 }

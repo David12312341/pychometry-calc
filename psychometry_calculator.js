@@ -1,12 +1,13 @@
 
 
 function getResults() {
+    fixAnswers();
     getHebrewScore();
     getEnglishScore();
     getMathScore();
     getOverallTotal();
-
 }
+
 var hebrewChosen = false;
 var englishChosen = false;
 var mathChosen = false;
@@ -20,6 +21,98 @@ var hebrewTotalAnswers = 0;
 var englishTotalAnswers = 0;
 var mathTotalAnswers = 0;
 
+function fixAnswers() {
+    if (document.getElementById("hebSection1").value < 0) {
+        document.getElementById("hebSection1").value = 0;
+        document.getElementById("hebSection1").style = "background-color: lightblue;";
+    }
+
+    if (document.getElementById("hebSection1").value > 23) {
+        document.getElementById("hebSection1").value = 23;
+        document.getElementById("hebSection1").style = "background-color: lightblue;"
+    }
+
+    if (document.getElementById("hebSection2").value < 0) {
+        document.getElementById("hebSection2").value = 0;
+        document.getElementById("hebSection2").style = "background-color: lightblue;"
+    }
+
+    if (document.getElementById("hebSection2").value > 23) {
+        document.getElementById("hebSection2").value = 23;
+        document.getElementById("hebSection2").style = "background-color: lightblue;"
+    }
+
+    if (document.getElementById("hebSection3").value < 0) {
+        document.getElementById("hebSection3").value = 0;
+        document.getElementById("hebSection3").style = "background-color: lightblue;"
+    }
+    
+    if (document.getElementById("hebSection3").value > 23) {
+        document.getElementById("hebSection3").value = 23;
+        document.getElementById("hebSection3").style = "background-color: lightblue;"
+    }
+
+    if (document.getElementById("engSection1").value < 0) {
+        document.getElementById("engSection1").value = 0; 
+        document.getElementById("engSection1").style = "background-color: lightblue;"
+    }
+
+    if (document.getElementById("engSection1").value > 23) {
+        document.getElementById("engSection1").value = 23;
+        document.getElementById("engSection1").style = "background-color: lightblue;"
+    }
+
+    if (document.getElementById("engSection2").value < 0) {
+        document.getElementById("engSection2").value = 0;
+        document.getElementById("engSection2").style = "background-color: lightblue;"
+    }
+
+    if (document.getElementById("engSection2").value > 23) {
+        document.getElementById("engSection2").value = 23;
+        document.getElementById("engSection2").style = "background-color: lightblue;"
+    }
+
+    if (document.getElementById("engSection3").value < 0) {
+        document.getElementById("engSection3").value = 0;
+        document.getElementById("engSection3").style = "background-color: lightblue;"
+    }
+
+    if (document.getElementById("engSection3").value > 23) {
+        document.getElementById("engSection3").value = 23;
+        document.getElementById("engSection3").style = "background-color: lightblue;"
+    }
+
+    if (document.getElementById("mathSection1").value < 0) {
+        document.getElementById("mathSection1").value = 0;
+        document.getElementById("mathSection1").style = "background-color: lightblue;"
+    }
+
+    if (document.getElementById("mathSection1").value > 23) {
+        document.getElementById("mathSection1").value = 23;
+        document.getElementById("mathSection1").style = "background-color: lightblue;"
+    }
+
+    if (document.getElementById("mathSection2").value < 0) {
+        document.getElementById("mathSection2").value = 0;
+        document.getElementById("mathSection2").style = "background-color: lightblue;"
+    }
+
+    if (document.getElementById("mathSection2").value > 23) {
+        document.getElementById("mathSection2").value = 23;
+        document.getElementById("mathSection2").style = "background-color: lightblue;"
+    }
+
+    if (document.getElementById("mathSection3").value < 0) {
+        document.getElementById("mathSection3").value = 0;
+        document.getElementById("mathSection3").style = "background-color: lightblue;"
+    }
+
+    if (document.getElementById("mathSection3").value > 23) {
+        document.getElementById("mathSection3").value = 23;
+        document.getElementById("mathSection3").style = "background-color: lightblue;"
+    }
+
+}
 function getHebrewScore() {
     if (hebrewSectionsTotal == 1) {
         hebrewTotalAnswers = Number(document.getElementById("hebSection1").value);
@@ -113,7 +206,8 @@ function selectHebrewSections(hebrewSectionsTotalSelected) {
         document.getElementById("heb1").setAttribute("class", "btn btn-outline-info selected-button-sections");
         document.getElementById("heb2").setAttribute("class", "btn btn-outline-info");
         document.getElementById("heb3").setAttribute("class", "btn btn-outline-info");
-
+        
+        document.getElementById("hebSec1").setAttribute("style", "");
         document.getElementById("hebSec2").setAttribute("style", "display:none");
         document.getElementById("hebSec3").setAttribute("style", "display:none");
     }
@@ -123,6 +217,8 @@ function selectHebrewSections(hebrewSectionsTotalSelected) {
         document.getElementById("heb2").setAttribute("class", "btn btn-outline-info selected-button-sections");
         document.getElementById("heb3").setAttribute("class", "btn btn-outline-info");
 
+        document.getElementById("hebSec1").setAttribute("style", "");
+        document.getElementById("hebSec2").setAttribute("style", "");
         document.getElementById("hebSec3").setAttribute("style", "display:none");
     }
 
@@ -130,6 +226,10 @@ function selectHebrewSections(hebrewSectionsTotalSelected) {
         document.getElementById("heb1").setAttribute("class", "btn btn-outline-info");
         document.getElementById("heb2").setAttribute("class", "btn btn-outline-info");
         document.getElementById("heb3").setAttribute("class", "btn btn-outline-info selected-button-sections");
+
+        document.getElementById("hebSec1").setAttribute("style", "");
+        document.getElementById("hebSec2").setAttribute("style", "");
+        document.getElementById("hebSec3").setAttribute("style", "");
     }
 }
 
@@ -142,6 +242,7 @@ function selectEnglishSections(englishSectionsTotalSelected) {
         document.getElementById("eng2").setAttribute("class", "btn btn-outline-info");
         document.getElementById("eng3").setAttribute("class", "btn btn-outline-info");
 
+        document.getElementById("engSec1").setAttribute("style", "");
         document.getElementById("engSec2").setAttribute("style", "display:none");
         document.getElementById("engSec3").setAttribute("style", "display:none");
     }
@@ -150,7 +251,9 @@ function selectEnglishSections(englishSectionsTotalSelected) {
         document.getElementById("eng1").setAttribute("class", "btn btn-outline-info");
         document.getElementById("eng2").setAttribute("class", "btn btn-outline-info selected-button-sections");
         document.getElementById("eng3").setAttribute("class", "btn btn-outline-info");
-
+        
+        document.getElementById("engSec1").setAttribute("style", "");
+        document.getElementById("engSec2").setAttribute("style", "");
         document.getElementById("engSec3").setAttribute("style", "display:none");
     }
 
@@ -158,6 +261,10 @@ function selectEnglishSections(englishSectionsTotalSelected) {
         document.getElementById("eng1").setAttribute("class", "btn btn-outline-info");
         document.getElementById("eng2").setAttribute("class", "btn btn-outline-info");
         document.getElementById("eng3").setAttribute("class", "btn btn-outline-info selected-button-sections");
+
+        document.getElementById("engSec1").setAttribute("style", "");
+        document.getElementById("engSec2").setAttribute("style", "");
+        document.getElementById("engSec3").setAttribute("style", "");
     }
 }
 
@@ -170,6 +277,7 @@ function selectMathSections(mathSectionsTotalSelected) {
         document.getElementById("math2").setAttribute("class", "btn btn-outline-info");
         document.getElementById("math3").setAttribute("class", "btn btn-outline-info");
 
+        document.getElementById("mathSec1").setAttribute("style", "");
         document.getElementById("mathSec2").setAttribute("style", "display:none");
         document.getElementById("mathSec3").setAttribute("style", "display:none");
     }
@@ -180,6 +288,8 @@ function selectMathSections(mathSectionsTotalSelected) {
         document.getElementById("math2").setAttribute("class", "btn btn-outline-info selected-button-sections");
         document.getElementById("math3").setAttribute("class", "btn btn-outline-info");
 
+        document.getElementById("mathSec1").setAttribute("style", "");
+        document.getElementById("mathSec2").setAttribute("style", "");
         document.getElementById("mathSec3").setAttribute("style", "display:none");
     }
 
@@ -188,15 +298,35 @@ function selectMathSections(mathSectionsTotalSelected) {
         document.getElementById("math1").setAttribute("class", "btn btn-outline-info");
         document.getElementById("math2").setAttribute("class", "btn btn-outline-info");
         document.getElementById("math3").setAttribute("class", "btn btn-outline-info selected-button-sections");
+
+        document.getElementById("mathSec1").setAttribute("style", "");
+        document.getElementById("mathSec2").setAttribute("style", "");
+        document.getElementById("mathSec3").setAttribute("style", "");
     }
+}
+
+function resetAllButtons() {
+    document.getElementById("math1").setAttribute("class", "btn btn-outline-info");
+    document.getElementById("math2").setAttribute("class", "btn btn-outline-info");
+    document.getElementById("math3").setAttribute("class", "btn btn-outline-info");
+
+    document.getElementById("heb1").setAttribute("class", "btn btn-outline-info");
+    document.getElementById("heb2").setAttribute("class", "btn btn-outline-info");
+    document.getElementById("heb3").setAttribute("class", "btn btn-outline-info");
+
+    document.getElementById("eng1").setAttribute("class", "btn btn-outline-info");
+    document.getElementById("eng2").setAttribute("class", "btn btn-outline-info");
+    document.getElementById("eng3").setAttribute("class", "btn btn-outline-info");
+
+    hebrewSectionsTotal = 0;
+    englishSectionsTotal = 0;
+    mathSectionsTotal = 0;
 }
 
 function notEnoughSections() {
     document.getElementById("inputForm").setAttribute("style", "border-color:red");
     document.getElementById("errorLabel1").setAttribute("style", "color:red;");
-    hebrewSectionsTotal = 0;
-    englishSectionsTotal = 0;
-    mathSectionsTotal = 0;
+    resetAllButtons();
 }
 
 $(document).ready(function () {
@@ -204,7 +334,7 @@ $(document).ready(function () {
     englishSectionsTotal = 0;
     mathSectionsTotal = 0;
 
-    $("#getTestButton").click(function () {
+     $("#getTestButton").click(function () {
         if (hebrewSectionsTotal + englishSectionsTotal + mathSectionsTotal == 8) {
             document.getElementById("inputForm").setAttribute("style", "");
             $("#sectionsTotal").fadeOut().delay(400)
@@ -217,7 +347,9 @@ $(document).ready(function () {
 
     $("#resultButton").click(function () {
         getResults();
-        $("#inputForm").fadeOut().delay(400)
+        setTimeout(() => {
+            $("#inputForm").fadeOut().delay(400)
+        }, 500);
         $("#resultsSection").fadeIn().delay(1000)
     });
 });
