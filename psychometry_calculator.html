@@ -5,166 +5,166 @@
         crossorigin="anonymous">
     <link href='http://serve.fontsproject.com/css?family=Drugulin+CLM:700' rel='stylesheet' type='text/css'>
     <style>
-    body {
-        background-image: url("bgform.jpg");
-        background-size: contain;
-        background-size: cover;
-        background-repeat: no-repeat;
-}
+        body {
+            background-image: url("bgform.jpg");
+            background-size: contain;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
-form {
-    color: darkslateblue;
-    width: 500px;
-    border: 2px solid;
-    border-radius: 10px;
-    border-color: dodgerblue;
-    padding: 50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    box-shadow: 4px 4px 4px rgba(0,123,255,.25);
-    background-color: #fdfeff;
-    
-}
-div {
-    direction: rtl;
-}
+        form {
+            color: darkslateblue;
+            width: 500px;
+            border: 2px solid;
+            border-radius: 10px;
+            border-color: dodgerblue;
+            padding: 50px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            box-shadow: 4px 4px 4px rgba(0, 123, 255, .25);
+            background-color: #fdfeff;
 
-html {
-    direction: rtl;
-}
+        }
 
-.form-row {
-    max-width: 600px;
-}
+        div {
+            direction: rtl;
+        }
 
-.selected-button-sections {
-    color: #fff;
-    background-color: #17a2b8;
-    border-color: #17a2b8;
-}
+        html {
+            direction: rtl;
+        }
 
-.answersSubject {
-    color: darkslateblue;
-    width: 400px;
-    border: 1px solid;
-    border-radius: 10px;
-    border-color: rgba(7, 194, 241, 0.425);
-    background-color: white;
-    border-radius: 5px;
-    -moz-border-radius: 5px 5px 0px 0px;
-    background: rgba(246, 253, 255, 0.562);
-    padding: 0px 8px 3px 8px;
-    box-shadow: 0px -1px 2px #F1F1F1;
-    -moz-box-shadow: -0px -1px 2px #F1F1F1;
-    -webkit-box-shadow: 4px 4px 4px #F1F1F1;
-    font-weight: normal;
-    font-size: 12px;
-    padding: 20px;
-    padding-bottom: 0px;
-    margin-bottom: 15px;
-}
+        .form-row {
+            max-width: 600px;
+        }
 
-.form-header {
-    border-bottom: 1px solid;
-        color: cornflowerblue;
-    margin: 20px;
-    border-color: lightgray;
-}
+        .selected-button-sections {
+            color: #fff;
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
 
-.calc-button {
-    border-top: 1px solid;
-    border-color: lightgray;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    margin-top: 10px;
-}
+        .answersSubject {
+            color: darkslateblue;
+            width: 400px;
+            border: 1px solid;
+            border-radius: 10px;
+            border-color: rgba(7, 194, 241, 0.425);
+            background-color: white;
+            border-radius: 5px;
+            -moz-border-radius: 5px 5px 0px 0px;
+            background: rgba(246, 253, 255, 0.562);
+            padding: 0px 8px 3px 8px;
+            box-shadow: 0px -1px 2px #F1F1F1;
+            -moz-box-shadow: -0px -1px 2px #F1F1F1;
+            -webkit-box-shadow: 4px 4px 4px #F1F1F1;
+            font-weight: normal;
+            font-size: 12px;
+            padding: 20px;
+            padding-bottom: 0px;
+            margin-bottom: 15px;
+        }
 
-.results {
-    width: 500px;
-    border: 2px solid;
-    border-radius: 10px;
-    border-color: dodgerblue;
-    padding: 50px;
-    padding-top: 20px;
-    box-shadow: 4px 4px 4px rgba(0,123,255,.25);
-    background-color: #fdfeff;
-}
+        .form-header {
+            border-bottom: 1px solid;
+            color: cornflowerblue;
+            margin: 20px;
+            border-color: lightgray;
+        }
 
-.score {
-    position: relative;
-    right: 240px;
-    font-size: 14px;
-}
+        .calc-button {
+            border-top: 1px solid;
+            border-color: lightgray;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            margin-top: 10px;
+        }
 
-.score-subject {
-        color: darkgreen;
-        background-color: rgb(207, 243, 207);
-    width: 400px;
-    border: 1px solid;
-        border-color: rgb(162, 214, 162);
-    border-radius: 10px;
-    border-radius: 5px;
-    -moz-border-radius: 5px 5px 0px 0px;
-    padding: 0px 8px 3px 8px;
-    box-shadow: 0px -1px 2px #F1F1F1;
-    -moz-box-shadow: -0px -1px 2px #F1F1F1;
-    -webkit-box-shadow: 4px 4px 4px #F1F1F1;
-    font-weight: normal;
-    font-size: 12px;
-    padding: 20px;
-    padding-bottom: 0px;
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: row;
-}
+        .results {
+            width: 500px;
+            border: 2px solid;
+            border-radius: 10px;
+            border-color: dodgerblue;
+            padding: 50px;
+            padding-top: 20px;
+            box-shadow: 4px 4px 4px rgba(0, 123, 255, .25);
+            background-color: #fdfeff;
+        }
 
-.overall-score-subject {
-        color: darkgreen;
-    background-color: rgb(207, 243, 207);
-    width: 400px;
-    border: 1px solid;
-        border-color: rgb(162, 214, 162);
-    border-radius: 10px;
-    border-radius: 5px;
-    -moz-border-radius: 5px 5px 0px 0px;
-    padding: 0px 8px 3px 8px;
-    box-shadow: 0px -1px 2px #F1F1F1;
-    -moz-box-shadow: -0px -1px 2px #F1F1F1;
-    -webkit-box-shadow: 4px 4px 4px #F1F1F1;
-    font-weight: normal;
-    font-size: 12px;
-    padding: 20px;
-    padding-bottom: 0px;
-    margin-bottom: 15px;
+        .score {
+            position: relative;
+            right: 240px;
+            font-size: 14px;
+        }
 
-}
+        .score-subject {
+            color: darkgreen;
+            background-color: rgb(207, 243, 207);
+            width: 400px;
+            border: 1px solid;
+            border-color: rgb(162, 214, 162);
+            border-radius: 10px;
+            border-radius: 5px;
+            -moz-border-radius: 5px 5px 0px 0px;
+            padding: 0px 8px 3px 8px;
+            box-shadow: 0px -1px 2px #F1F1F1;
+            -moz-box-shadow: -0px -1px 2px #F1F1F1;
+            -webkit-box-shadow: 4px 4px 4px #F1F1F1;
+            font-weight: normal;
+            font-size: 12px;
+            padding: 20px;
+            padding-bottom: 0px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: row;
+        }
 
-.form-control-cust {
-    width: 18%;
-    position: relative;
-    right: 20px;
-    height: 27px;
-    top: 3px;
-    padding: .375rem .75rem;
-    padding-left: 0px;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-}
+        .overall-score-subject {
+            color: darkgreen;
+            background-color: rgb(207, 243, 207);
+            width: 400px;
+            border: 1px solid;
+            border-color: rgb(162, 214, 162);
+            border-radius: 10px;
+            border-radius: 5px;
+            -moz-border-radius: 5px 5px 0px 0px;
+            padding: 0px 8px 3px 8px;
+            box-shadow: 0px -1px 2px #F1F1F1;
+            -moz-box-shadow: -0px -1px 2px #F1F1F1;
+            -webkit-box-shadow: 4px 4px 4px #F1F1F1;
+            font-weight: normal;
+            font-size: 12px;
+            padding: 20px;
+            padding-bottom: 0px;
+            margin-bottom: 15px;
 
-.twenty-three {
-        font-size: 18px; 
-}
+        }
 
+        .form-control-cust {
+            width: 18%;
+            position: relative;
+            right: 20px;
+            height: 27px;
+            top: 3px;
+            padding: .375rem .75rem;
+            padding-left: 0px;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+        }
+
+        .twenty-three {
+            font-size: 18px;
+        }
     </style>
     <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script> 
-    
+
 
         function getResults() {
             fixAnswers();
@@ -222,8 +222,8 @@ html {
                 document.getElementById("engSection1").style = "background-color: lightblue;"
             }
 
-            if (document.getElementById("engSection1").value > 23) {
-                document.getElementById("engSection1").value = 23;
+            if (document.getElementById("engSection1").value > 22) {
+                document.getElementById("engSection1").value = 22;
                 document.getElementById("engSection1").style = "background-color: lightblue;"
             }
 
@@ -232,8 +232,8 @@ html {
                 document.getElementById("engSection2").style = "background-color: lightblue;"
             }
 
-            if (document.getElementById("engSection2").value > 23) {
-                document.getElementById("engSection2").value = 23;
+            if (document.getElementById("engSection2").value > 22) {
+                document.getElementById("engSection2").value = 22;
                 document.getElementById("engSection2").style = "background-color: lightblue;"
             }
 
@@ -242,8 +242,8 @@ html {
                 document.getElementById("engSection3").style = "background-color: lightblue;"
             }
 
-            if (document.getElementById("engSection3").value > 23) {
-                document.getElementById("engSection3").value = 23;
+            if (document.getElementById("engSection3").value > 22) {
+                document.getElementById("engSection3").value = 22;
                 document.getElementById("engSection3").style = "background-color: lightblue;"
             }
 
@@ -252,8 +252,8 @@ html {
                 document.getElementById("mathSection1").style = "background-color: lightblue;"
             }
 
-            if (document.getElementById("mathSection1").value > 23) {
-                document.getElementById("mathSection1").value = 23;
+            if (document.getElementById("mathSection1").value > 20) {
+                document.getElementById("mathSection1").value = 20;
                 document.getElementById("mathSection1").style = "background-color: lightblue;"
             }
 
@@ -262,8 +262,8 @@ html {
                 document.getElementById("mathSection2").style = "background-color: lightblue;"
             }
 
-            if (document.getElementById("mathSection2").value > 23) {
-                document.getElementById("mathSection2").value = 23;
+            if (document.getElementById("mathSection2").value > 20) {
+                document.getElementById("mathSection2").value = 20;
                 document.getElementById("mathSection2").style = "background-color: lightblue;"
             }
 
@@ -272,8 +272,8 @@ html {
                 document.getElementById("mathSection3").style = "background-color: lightblue;"
             }
 
-            if (document.getElementById("mathSection3").value > 23) {
-                document.getElementById("mathSection3").value = 23;
+            if (document.getElementById("mathSection3").value > 20) {
+                document.getElementById("mathSection3").value = 20;
                 document.getElementById("mathSection3").style = "background-color: lightblue;"
             }
 
@@ -500,7 +500,9 @@ html {
             mathSectionsTotal = 0;
 
             $("#getTestButton").click(function () {
-                if (hebrewSectionsTotal + englishSectionsTotal + mathSectionsTotal == 8) {
+                if ((hebrewSectionsTotal == 3 && englishSectionsTotal == 3 && mathSectionsTotal == 2) ||
+                    (hebrewSectionsTotal == 2 && englishSectionsTotal == 2 && mathSectionsTotal == 2) ||
+                    (hebrewSectionsTotal == 1 && englishSectionsTotal == 1 && mathSectionsTotal == 1)) {
                     document.getElementById("inputForm").setAttribute("style", "");
                     $("#sectionsTotal").fadeOut().delay(400)
                     $("#answersSection").fadeIn().delay(1000)
