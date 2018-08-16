@@ -16,7 +16,6 @@ var hebrewSectionsTotal = 0;
 var englishSectionsTotal = 0;
 var mathSectionsTotal = 0;
 
-
 var hebrewTotalAnswers = 0;
 var englishTotalAnswers = 0;
 var mathTotalAnswers = 0;
