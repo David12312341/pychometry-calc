@@ -6,10 +6,7 @@
     <link href='http://serve.fontsproject.com/css?family=Drugulin+CLM:700' rel='stylesheet' type='text/css'>
     <style>
         body {
-            background-image: url("bgform.jpg");
-            background-size: contain;
-            background-size: cover;
-            background-repeat: no-repeat;
+            background-image: url("background.png");
         }
 
         form {
@@ -504,8 +501,8 @@
                     (hebrewSectionsTotal == 2 && englishSectionsTotal == 2 && mathSectionsTotal == 2) ||
                     (hebrewSectionsTotal == 1 && englishSectionsTotal == 1 && mathSectionsTotal == 1)) {
                     document.getElementById("inputForm").setAttribute("style", "");
-                    $("#sectionsTotal").fadeOut().delay(400)
                     $("#answersSection").fadeIn().delay(1000)
+                    $("#sectionsTotal").fadeOut().delay(400)
                 }
                 else {
                     notEnoughSections();
@@ -515,9 +512,9 @@
             $("#resultButton").click(function () {
                 getResults();
                 setTimeout(() => {
+                    $("#resultsSection").fadeIn().delay(1000)
                     $("#inputForm").fadeOut().delay(400)
                 }, 500);
-                $("#resultsSection").fadeIn().delay(1000)
             });
         });
 
