@@ -112,10 +112,10 @@ margin-bottom: 15px;
 }
 
 .overall-score-subject {
-color: darkgreen;
-background-color: rgb(207, 243, 207);
-border: 1px solid;
-border-color: rgb(162, 214, 162);
+color: steelblue;
+    background-color: #d6e2ff;
+    border: 1px solid;
+    border-color: #bcd6f3;
 border-radius: 10px;
 border-radius: 5px;
 -moz-border-radius: 5px 5px 0px 0px;
