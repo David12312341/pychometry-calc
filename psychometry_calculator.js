@@ -1,5 +1,16 @@
+function setCss() {
+    var cssPath = "psychometry_calculator.css";
+    if (navigator.platform == "iPhone")
+        cssPath = "mobile.css";
 
+    var fileref = document.createElement("link");
 
+    fileref.setAttribute("rel", "stylesheet");
+    fileref.setAttribute("type", "text/css");
+    fileref.setAttribute("href", cssPath);
+
+    document.getElementsByTagName("head")[0].appendChild(fileref);
+}
 function getResults() {
     fixAnswers();
     getHebrewScore();
@@ -45,19 +56,19 @@ function fixAnswers() {
         document.getElementById("hebSection3").value = 0;
         document.getElementById("hebSection3").style = "background-color: lightblue;"
     }
-    
+
     if (document.getElementById("hebSection3").value > 23) {
         document.getElementById("hebSection3").value = 23;
         document.getElementById("hebSection3").style = "background-color: lightblue;"
     }
 
     if (document.getElementById("engSection1").value < 0) {
-        document.getElementById("engSection1").value = 0; 
+        document.getElementById("engSection1").value = 0;
         document.getElementById("engSection1").style = "background-color: lightblue;"
     }
 
-    if (document.getElementById("engSection1").value > 23) {
-        document.getElementById("engSection1").value = 23;
+    if (document.getElementById("engSection1").value > 22) {
+        document.getElementById("engSection1").value = 22;
         document.getElementById("engSection1").style = "background-color: lightblue;"
     }
 
@@ -66,8 +77,8 @@ function fixAnswers() {
         document.getElementById("engSection2").style = "background-color: lightblue;"
     }
 
-    if (document.getElementById("engSection2").value > 23) {
-        document.getElementById("engSection2").value = 23;
+    if (document.getElementById("engSection2").value > 22) {
+        document.getElementById("engSection2").value = 22;
         document.getElementById("engSection2").style = "background-color: lightblue;"
     }
 
@@ -76,8 +87,8 @@ function fixAnswers() {
         document.getElementById("engSection3").style = "background-color: lightblue;"
     }
 
-    if (document.getElementById("engSection3").value > 23) {
-        document.getElementById("engSection3").value = 23;
+    if (document.getElementById("engSection3").value > 22) {
+        document.getElementById("engSection3").value = 22;
         document.getElementById("engSection3").style = "background-color: lightblue;"
     }
 
@@ -86,8 +97,8 @@ function fixAnswers() {
         document.getElementById("mathSection1").style = "background-color: lightblue;"
     }
 
-    if (document.getElementById("mathSection1").value > 23) {
-        document.getElementById("mathSection1").value = 23;
+    if (document.getElementById("mathSection1").value > 20) {
+        document.getElementById("mathSection1").value = 20;
         document.getElementById("mathSection1").style = "background-color: lightblue;"
     }
 
@@ -96,8 +107,8 @@ function fixAnswers() {
         document.getElementById("mathSection2").style = "background-color: lightblue;"
     }
 
-    if (document.getElementById("mathSection2").value > 23) {
-        document.getElementById("mathSection2").value = 23;
+    if (document.getElementById("mathSection2").value > 20) {
+        document.getElementById("mathSection2").value = 20;
         document.getElementById("mathSection2").style = "background-color: lightblue;"
     }
 
@@ -106,8 +117,8 @@ function fixAnswers() {
         document.getElementById("mathSection3").style = "background-color: lightblue;"
     }
 
-    if (document.getElementById("mathSection3").value > 23) {
-        document.getElementById("mathSection3").value = 23;
+    if (document.getElementById("mathSection3").value > 20) {
+        document.getElementById("mathSection3").value = 20;
         document.getElementById("mathSection3").style = "background-color: lightblue;"
     }
 
@@ -205,7 +216,7 @@ function selectHebrewSections(hebrewSectionsTotalSelected) {
         document.getElementById("heb1").setAttribute("class", "btn btn-outline-info selected-button-sections");
         document.getElementById("heb2").setAttribute("class", "btn btn-outline-info");
         document.getElementById("heb3").setAttribute("class", "btn btn-outline-info");
-        
+
         document.getElementById("hebSec1").setAttribute("style", "");
         document.getElementById("hebSec2").setAttribute("style", "display:none");
         document.getElementById("hebSec3").setAttribute("style", "display:none");
@@ -250,7 +261,7 @@ function selectEnglishSections(englishSectionsTotalSelected) {
         document.getElementById("eng1").setAttribute("class", "btn btn-outline-info");
         document.getElementById("eng2").setAttribute("class", "btn btn-outline-info selected-button-sections");
         document.getElementById("eng3").setAttribute("class", "btn btn-outline-info");
-        
+
         document.getElementById("engSec1").setAttribute("style", "");
         document.getElementById("engSec2").setAttribute("style", "");
         document.getElementById("engSec3").setAttribute("style", "display:none");
@@ -333,11 +344,13 @@ $(document).ready(function () {
     englishSectionsTotal = 0;
     mathSectionsTotal = 0;
 
-     $("#getTestButton").click(function () {
-        if (hebrewSectionsTotal + englishSectionsTotal + mathSectionsTotal == 8) {
+    $("#getTestButton").click(function () {
+        if ((hebrewSectionsTotal == 3 && englishSectionsTotal == 3 && mathSectionsTotal == 2) ||
+            (hebrewSectionsTotal == 2 && englishSectionsTotal == 2 && mathSectionsTotal == 2) ||
+            (hebrewSectionsTotal == 1 && englishSectionsTotal == 1 && mathSectionsTotal == 1)) {
             document.getElementById("inputForm").setAttribute("style", "");
-            $("#sectionsTotal").fadeOut().delay(400)
             $("#answersSection").fadeIn().delay(1000)
+            $("#sectionsTotal").fadeOut().delay(400)
         }
         else {
             notEnoughSections();
@@ -347,8 +360,8 @@ $(document).ready(function () {
     $("#resultButton").click(function () {
         getResults();
         setTimeout(() => {
+            $("#resultsSection").fadeIn().delay(1000)
             $("#inputForm").fadeOut().delay(400)
         }, 500);
-        $("#resultsSection").fadeIn().delay(1000)
     });
 });

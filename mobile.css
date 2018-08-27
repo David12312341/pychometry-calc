@@ -2,7 +2,13 @@ body {
 background-color: rgba(0,0,0,0);
 }
 
+.mainForm {
+    width: 100%
+}
+
 form {
+max-width: 100%;
+box-sizing: border-box;
 color: darkslateblue;
 width: 500px;
 border: 2px solid;
