@@ -1,16 +1,4 @@
-function setCss() {
-    var cssPath = "psychometry_calculator.css";
-    if (navigator.platform != "iPhone")
-        cssPath = "mobile.css";
 
-    var fileref = document.createElement("link");
-
-    fileref.setAttribute("rel", "stylesheet");
-    fileref.setAttribute("type", "text/css");
-    fileref.setAttribute("href", cssPath);
-
-    document.getElementsByTagName("head")[0].appendChild(fileref);
-}
 function getResults() {
     fixAnswers();
     getHebrewScore();
