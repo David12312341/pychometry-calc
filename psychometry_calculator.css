@@ -6,7 +6,7 @@ background-color: rgba(0,0,0,0);
 form {
 color: darkslateblue;
 width: 100%;
-max-width: 100%;
+max-width: 500px;
 /*
 border: 2px solid;
 border-radius: 10px;
@@ -82,9 +82,10 @@ border-radius: 10px;
 border-color: dodgerblue;
 box-shadow: 4px 4px 4px rgba(0, 123, 255, .25);
 */
+max-width: 500px;
+width:100%;
 padding: 50px;
 padding-top: 20px;
-
 background-color: #fdfeff;
 }
 
