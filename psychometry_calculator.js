@@ -213,7 +213,7 @@ function selectHebrewSections(hebrewSectionsTotalSelected) {
     hebrewSectionsTotal = hebrewSectionsTotalSelected;
 
     if (hebrewSectionsTotalSelected == 1) {
-        document.getElementById("heb1").setAttribute("class", "btn btn-outline-info selected-button-sections");
+        document.getElementById("heb1").setAttribute("class", "btn selected-button-sections btn-outline-info ");
         document.getElementById("heb2").setAttribute("class", "btn btn-outline-info");
         document.getElementById("heb3").setAttribute("class", "btn btn-outline-info");
 

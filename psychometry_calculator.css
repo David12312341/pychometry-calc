@@ -6,6 +6,7 @@ background-color: rgba(0,0,0,0);
 form {
 color: darkslateblue;
 width: 100%;
+max-width: 100%;
 border: 2px solid;
 border-radius: 10px;
 border-color: dodgerblue;
@@ -37,7 +38,6 @@ border-color: #17a2b8;
 
 .answersSubject {
 color: darkslateblue;
-width: 400px;
 border: 1px solid;
 border-radius: 10px;
 border-color: rgba(7, 194, 241, 0.425);
@@ -149,6 +149,7 @@ font-size: 18px;
 
 .container-results {
     width:100%;
+    max-width:100%;
 }
 
 .all-results {
