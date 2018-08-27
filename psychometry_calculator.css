@@ -7,13 +7,16 @@ form {
 color: darkslateblue;
 width: 100%;
 max-width: 100%;
+/*
 border: 2px solid;
 border-radius: 10px;
 border-color: dodgerblue;
+box-shadow: 4px 4px 4px rgba(0, 123, 255, .25);
+*/
 padding: 50px;
 padding-top: 20px;
 padding-bottom: 20px;
-box-shadow: 4px 4px 4px rgba(0, 123, 255, .25);
+
 background-color: #fdfeff;
 
 }
@@ -73,12 +76,15 @@ margin-top: 10px;
 
 .results {
 text-align: center;
+/*
 border: 2px solid;
 border-radius: 10px;
 border-color: dodgerblue;
+box-shadow: 4px 4px 4px rgba(0, 123, 255, .25);
+*/
 padding: 50px;
 padding-top: 20px;
-box-shadow: 4px 4px 4px rgba(0, 123, 255, .25);
+
 background-color: #fdfeff;
 }
 
@@ -154,4 +160,14 @@ font-size: 18px;
 
 .all-results {
     width: fit-content;
+}
+
+.dbt:before {
+    color:#d5dae5;
+    content: "Designed and built by Dan Zlotnikov";
+    font-size: 12px;
+}
+
+.dbt {
+    margin-top:0%;
 }
