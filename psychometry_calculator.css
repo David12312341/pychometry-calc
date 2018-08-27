@@ -2,9 +2,14 @@ body {
 background-color: rgba(0,0,0,0);
 }
 
+.mainForm {
+    width:100%;
+    max-width: 500px;
+}
+
 form {
 color: darkslateblue;
-width: 500px;
+width: 100%;
 border: 2px solid;
 border-radius: 10px;
 border-color: dodgerblue;
