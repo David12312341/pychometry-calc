@@ -213,7 +213,7 @@ function selectHebrewSections(hebrewSectionsTotalSelected) {
     hebrewSectionsTotal = hebrewSectionsTotalSelected;
 
     if (hebrewSectionsTotalSelected == 1) {
-        document.getElementById("heb1").setAttribute("class", "btn selected-button-sections btn-outline-info ");
+        document.getElementById("heb1").setAttribute("class", "btn btn-outline-info selected-button-sections");
         document.getElementById("heb2").setAttribute("class", "btn btn-outline-info");
         document.getElementById("heb3").setAttribute("class", "btn btn-outline-info");
 
@@ -345,7 +345,7 @@ $(document).ready(function () {
     mathSectionsTotal = 0;
 
     $("#getTestButton").click(function () {
-        if ((hebrewSectionsTotal == 3 && englishSectionsTotal == 3 && mathSectionsTotal == 2) ||
+        if ((hebrewSectionsTotal + englishSectionsTotal + mathSectionsTotal == 8) ||
             (hebrewSectionsTotal == 2 && englishSectionsTotal == 2 && mathSectionsTotal == 2) ||
             (hebrewSectionsTotal == 1 && englishSectionsTotal == 1 && mathSectionsTotal == 1)) {
             document.getElementById("inputForm").setAttribute("style", "");
