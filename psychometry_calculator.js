@@ -364,4 +364,20 @@ $(document).ready(function () {
             $("#inputForm").fadeOut().delay(400)
         }, 500);
     });
+
+    $("#startButton").click(function () {
+        getResults();
+        setTimeout(() => {
+            $("#sectionsTotal").fadeIn().delay(1000)
+            $("#answersSection").fadeOut()
+        }, 500);
+    });
+
+    $("#answersButton").click(function () {
+        getResults();
+        setTimeout(() => {
+            $("#sectionsTotal").fadeIn().delay(1000)
+            $("#resultsSection").fadeOut()
+        }, 500);
+    });
 });

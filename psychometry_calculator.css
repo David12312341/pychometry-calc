@@ -165,10 +165,20 @@ font-size: 18px;
 
 .dbt:before {
     color:#d5dae5;
-    content: "Designed and built by Dan Zlotnikov";
+    content: 'Designed and built by Dan Zlotnikov';
     font-size: 12px;
 }
 
 .dbt {
+    margin-top:0%;
+}
+
+.dmbt:before {
+    color:#d5dae5;
+    content: 'Formula by David Maman';
+    font-size: 12px;
+}
+
+.dmbt {
     margin-top:0%;
 }
